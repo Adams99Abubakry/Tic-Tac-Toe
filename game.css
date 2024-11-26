@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    width: 450px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+  }
+  
+  /* Game Options Section */
+  .game-options {
+    margin-bottom: 20px;
+  }
+  
+  .game-options p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Scoreboard */
+  .scoreboard {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 15px 0;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+  }
+  
+  .scoreboard p {
+    margin: 5px 0;
+    animation: popIn 0.5s ease;
+  }
+  
+  /* Board Section */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 20px auto;
+    width: 320px;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cell:hover {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cell.taken {
+    cursor: not-allowed;
+    color: #777;
+    background: #dcdcdc;
+  }
+  
+  /* Info Section */
+  .info {
+    margin-top: 20px;
+  }
+  
+  #message {
+    font-size: 1.5rem;
+    color: #555;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes popIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
